@@ -194,14 +194,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', type=str, required=True, help='flickr27 or logodet3k')
     parser.add_argument('--plot', action='store_true', help='To plot converted bboxes')
-    parser.add_argument('--image', default='flickr_logos_27_dataset/flickr_logos_27_dataset_images/4771736332.txt', type=str, help='path to plot image')
+    parser.add_argument('--image', default='flickr_logos_27_dataset_images/4771736332.txt', type=str, help='path to plot image')
     opt = parser.parse_args()
-print(opt)
+    print(opt)
     if opt.dataset == 'flickr27':
         annotations_path = 'flickr_logos_27_dataset/flickr_logos_27_dataset_training_set_annotation.txt'
         class_name_to_id_mapping = get_class_names(annotations_path)
         class_id_to_name_mapping = dict(zip(class_name_to_id_mapping.values(), class_name_to_id_mapping.keys()))
-        image_paths = get_image_paths('flickr_logos_27_dataset/flickr_logos_27_dataset_images')
+        image_paths = get_image_paths('flickr_logos_27_dataset_images')
 
 
         for image_path in tqdm(image_paths):
