@@ -61,7 +61,7 @@ def main():
     opt = parser.parse_args()
 
     if opt.dataset == 'flickr27':
-        annotations, images = get_annotations_flickr('flickr_logos_27_dataset/flickr_logos_27_dataset_images')
+        annotations, images = get_annotations_flickr('flickr_logos_27_dataset_images')
     else:
         annotations, images = get_annotations('data/LogoDet-3K')
 
