@@ -196,7 +196,7 @@ def main():
     parser.add_argument('--plot', action='store_true', help='To plot converted bboxes')
     parser.add_argument('--image', default='flickr_logos_27_dataset/flickr_logos_27_dataset_images/4771736332.txt', type=str, help='path to plot image')
     opt = parser.parse_args()
-
+print(opt)
     if opt.dataset == 'flickr27':
         annotations_path = 'flickr_logos_27_dataset/flickr_logos_27_dataset_training_set_annotation.txt'
         class_name_to_id_mapping = get_class_names(annotations_path)
