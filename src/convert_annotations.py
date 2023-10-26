@@ -209,7 +209,7 @@ def main():
             width, height = current_image.size
             current_image_name = image_path.split('/')[-1].split('.')[0]
             out = get_annotations(annotations_path, current_image_name, width, height)
-            convert_to_yolov5(out, image_path, class_name_to_id_mapping)
+            #convert_to_yolov5(out, image_path, class_name_to_id_mapping)
 
     else:
         # Dictionary that maps class names to IDs
@@ -220,7 +220,7 @@ def main():
         # Convert and save the annotations
         for ann in tqdm(annotations):
             info_dict = extract_info_from_xml(ann)
-            convert_to_yolov5(info_dict, ann)
+            #convert_to_yolov5(info_dict, ann)
 
     # Get any random annotation file
     # To test the annotations please uncomment the lines below
